@@ -1,0 +1,18 @@
+CS_SKILL_ALIASES = {
+    "python": ["python"],
+    "java": ["java"],
+    "javascript": ["javascript", "js"],
+    "typescript": ["typescript", "ts"],
+    "react": ["react", "reactjs"],
+    "next.js": ["next", "nextjs"],
+    "node.js": ["node", "nodejs"],
+    "fastapi": ["fastapi"],
+    "django": ["django"],
+    "flask": ["flask"],
+    "sql": ["sql", "mysql", "postgres"],
+    "mongodb": ["mongodb", "mongo"],
+    "git": ["git", "github"],
+    "docker": ["docker"],
+    "aws": ["aws", "amazon web services"],
+    "rest api": ["rest api", "api"],
+}
