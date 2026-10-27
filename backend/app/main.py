@@ -20,7 +20,7 @@ import re
 from fastapi.responses import StreamingResponse
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
-from cs_profile import CS_SKILL_ALIASES
+from app.cs_profilecs_profile import CS_SKILL_ALIASES
 
 
 # Free local AI model for rewriting and summarization
