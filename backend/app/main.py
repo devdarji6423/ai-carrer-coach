@@ -20,8 +20,13 @@ import re
 from fastapi.responses import StreamingResponse
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
-from cs_profile import CS_SKILL_ALIASES
+from app.cs_profile import CS_SKILL_ALIASES
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000").split(",")
 
 # Free local AI model for rewriting and summarization
 rewrite_model = pipeline(
@@ -295,15 +300,12 @@ app = FastAPI()
 # Allow frontend to call backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-    ],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-headers = ["*"]
+
 
 
 class PDFRequest(BaseModel):
