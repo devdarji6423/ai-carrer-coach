@@ -16,7 +16,7 @@ import {
 /* Configuration                                                              */
 /* -------------------------------------------------------------------------- */
 
-const BACKEND_URL = "http://127.0.0.1:8000";
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL ?? "http://127.0.0.1:8000";
 const MAX_FILE_MB = 5;
 const MAX_FILE_BYTES = MAX_FILE_MB * 1024 * 1024;
 
